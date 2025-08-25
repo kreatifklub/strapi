@@ -21,11 +21,6 @@
     "handle": {
       "type": "string",
       "unique": true
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
     }
   }
 }

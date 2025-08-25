@@ -53,6 +53,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::variant.variant"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }
