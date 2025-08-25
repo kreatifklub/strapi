@@ -32,15 +32,6 @@
       },
       "unique": true
     },
-    "handle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "unique": true
-    },
     "sku": {
       "type": "string",
       "pluginOptions": {

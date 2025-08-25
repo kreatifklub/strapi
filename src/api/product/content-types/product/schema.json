@@ -48,6 +48,11 @@
           "localized": true
         }
       }
+    },
+    "variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::variant.variant"
     }
   }
 }
