@@ -394,6 +394,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       'api::category.category'
     > &
       Schema.Attribute.Private;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     systemId: Schema.Attribute.String & Schema.Attribute.Unique;
     title: Schema.Attribute.String;
@@ -419,10 +420,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    categories: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::category.category'
-    >;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -489,6 +487,7 @@ export interface ApiVariantVariant extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::variant.variant'
     >;
+    product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     sku: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{

@@ -49,15 +49,17 @@
         }
       }
     },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
     "variants": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::variant.variant"
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
+      "target": "api::variant.variant",
+      "mappedBy": "product"
     }
   }
 }
