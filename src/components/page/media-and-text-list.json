@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_media_and_text_lists",
+  "info": {
+    "displayName": "Media & Text List",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Items": {
+      "type": "component",
+      "component": "general.card-media-and-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

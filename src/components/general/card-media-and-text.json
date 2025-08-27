@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_general_card_media_and_texts",
+  "info": {
+    "displayName": "Card - Media & Text",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "Links": {
+      "type": "component",
+      "component": "general.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

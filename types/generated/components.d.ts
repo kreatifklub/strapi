@@ -13,6 +13,25 @@ export interface GeneralCardBenefits extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralCardContact extends Struct.ComponentSchema {
+  collectionName: 'components_general_card_contacts';
+  info: {
+    displayName: 'Card - Contact';
+    icon: 'sun';
+  };
+  attributes: {
+    Headline: Schema.Attribute.String;
+    Link: Schema.Attribute.Component<'general.link', false>;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
+  };
+}
+
 export interface GeneralCardEmployee extends Struct.ComponentSchema {
   collectionName: 'components_general_card_employees';
   info: {
@@ -56,6 +75,27 @@ export interface GeneralCardIntro extends Struct.ComponentSchema {
   attributes: {
     Description: Schema.Attribute.Text;
     Label: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralCardMediaAndText extends Struct.ComponentSchema {
+  collectionName: 'components_general_card_media_and_texts';
+  info: {
+    displayName: 'Card - Media & Text';
+    icon: 'picture';
+  };
+  attributes: {
+    Headline: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+    Links: Schema.Attribute.Component<'general.link', true>;
+    Media: Schema.Attribute.Media<'images' | 'videos', true>;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
   };
 }
 
@@ -150,6 +190,22 @@ export interface PageBenefits extends Struct.ComponentSchema {
     Benefits: Schema.Attribute.Component<'general.card-benefits', true>;
     Headline: Schema.Attribute.String;
     Label: Schema.Attribute.String;
+  };
+}
+
+export interface PageContact extends Struct.ComponentSchema {
+  collectionName: 'components_page_contacts';
+  info: {
+    displayName: 'Contact';
+    icon: 'sun';
+  };
+  attributes: {
+    Headline: Schema.Attribute.String;
+    Items: Schema.Attribute.Component<'general.card-contact', true>;
+    Label: Schema.Attribute.String;
+    Style: Schema.Attribute.Enumeration<
+      ['LeftBottomGreen', 'LeftBottomViolet', 'RightTopGreen', 'RightTopViolet']
+    >;
   };
 }
 
@@ -258,6 +314,17 @@ export interface PageMediaAndText extends Struct.ComponentSchema {
   };
 }
 
+export interface PageMediaAndTextList extends Struct.ComponentSchema {
+  collectionName: 'components_page_media_and_text_lists';
+  info: {
+    displayName: 'Media & Text List';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Items: Schema.Attribute.Component<'general.card-media-and-text', true>;
+  };
+}
+
 export interface PageTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_page_testimonials';
   info: {
@@ -301,21 +368,25 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'general.card-benefits': GeneralCardBenefits;
+      'general.card-contact': GeneralCardContact;
       'general.card-employee': GeneralCardEmployee;
       'general.card-faq': GeneralCardFaq;
       'general.card-intro': GeneralCardIntro;
+      'general.card-media-and-text': GeneralCardMediaAndText;
       'general.card-testimonials': GeneralCardTestimonials;
       'general.card-tile': GeneralCardTile;
       'general.card-timeline': GeneralCardTimeline;
       'general.link': GeneralLink;
       'groups.group-faq': GroupsGroupFaq;
       'page.benefits': PageBenefits;
+      'page.contact': PageContact;
       'page.employees': PageEmployees;
       'page.faq': PageFaq;
       'page.hero': PageHero;
       'page.intro': PageIntro;
       'page.location': PageLocation;
       'page.media-and-text': PageMediaAndText;
+      'page.media-and-text-list': PageMediaAndTextList;
       'page.testimonials': PageTestimonials;
       'page.tiles': PageTiles;
       'page.timeline': PageTimeline;

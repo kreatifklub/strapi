@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_general_card_contacts",
+  "info": {
+    "displayName": "Card - Contact",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "Link": {
+      "type": "component",
+      "component": "general.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

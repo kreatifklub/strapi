@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_page_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "enumeration",
+      "enum": [
+        "LeftBottomGreen",
+        "LeftBottomViolet",
+        "RightTopGreen",
+        "RightTopViolet"
+      ]
+    },
+    "Items": {
+      "type": "component",
+      "component": "general.card-contact",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
