@@ -99,6 +99,19 @@ export interface GeneralCardMediaAndText extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralCardSponsor extends Struct.ComponentSchema {
+  collectionName: 'components_general_card_sponsors';
+  info: {
+    displayName: 'Card - Sponsor';
+    icon: 'bell';
+  };
+  attributes: {
+    Alt: Schema.Attribute.String;
+    Logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Url: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralCardTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_general_card_testimonials';
   info: {
@@ -180,6 +193,28 @@ export interface GroupsGroupFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface PageBanner extends Struct.ComponentSchema {
+  collectionName: 'components_page_banners';
+  info: {
+    displayName: 'Banner';
+    icon: 'picture';
+  };
+  attributes: {
+    Background: Schema.Attribute.Media<'images' | 'videos'>;
+    Headline: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+    Links: Schema.Attribute.Component<'general.link', true>;
+    Stretch: Schema.Attribute.Boolean;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
+  };
+}
+
 export interface PageBenefits extends Struct.ComponentSchema {
   collectionName: 'components_page_benefits';
   info: {
@@ -233,6 +268,26 @@ export interface PageFaq extends Struct.ComponentSchema {
     Headline: Schema.Attribute.String;
     Label: Schema.Attribute.String;
     Media: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface PageGallery extends Struct.ComponentSchema {
+  collectionName: 'components_page_galleries';
+  info: {
+    displayName: 'Gallery';
+    icon: 'landscape';
+  };
+  attributes: {
+    Gallery: Schema.Attribute.Media<'images', true>;
+    Headline: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
   };
 }
 
@@ -325,6 +380,26 @@ export interface PageMediaAndTextList extends Struct.ComponentSchema {
   };
 }
 
+export interface PageSponsors extends Struct.ComponentSchema {
+  collectionName: 'components_page_sponsors';
+  info: {
+    displayName: 'Sponsors';
+    icon: 'bell';
+  };
+  attributes: {
+    Headline: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+    Sponsors: Schema.Attribute.Component<'general.card-sponsor', true>;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
+  };
+}
+
 export interface PageTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_page_testimonials';
   info: {
@@ -373,20 +448,24 @@ declare module '@strapi/strapi' {
       'general.card-faq': GeneralCardFaq;
       'general.card-intro': GeneralCardIntro;
       'general.card-media-and-text': GeneralCardMediaAndText;
+      'general.card-sponsor': GeneralCardSponsor;
       'general.card-testimonials': GeneralCardTestimonials;
       'general.card-tile': GeneralCardTile;
       'general.card-timeline': GeneralCardTimeline;
       'general.link': GeneralLink;
       'groups.group-faq': GroupsGroupFaq;
+      'page.banner': PageBanner;
       'page.benefits': PageBenefits;
       'page.contact': PageContact;
       'page.employees': PageEmployees;
       'page.faq': PageFaq;
+      'page.gallery': PageGallery;
       'page.hero': PageHero;
       'page.intro': PageIntro;
       'page.location': PageLocation;
       'page.media-and-text': PageMediaAndText;
       'page.media-and-text-list': PageMediaAndTextList;
+      'page.sponsors': PageSponsors;
       'page.testimonials': PageTestimonials;
       'page.tiles': PageTiles;
       'page.timeline': PageTimeline;

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_sponsors",
+  "info": {
+    "displayName": "Sponsors",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "Sponsors": {
+      "type": "component",
+      "component": "general.card-sponsor",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_general_card_sponsors",
+  "info": {
+    "displayName": "Card - Sponsor",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Alt": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string",
+      "regex": "/^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$/"
+    }
+  },
+  "config": {}
+}
