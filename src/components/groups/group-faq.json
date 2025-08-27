@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_groups_group_faqs",
+  "info": {
+    "displayName": "Group - FAQ",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "FAQ": {
+      "type": "component",
+      "component": "general.card-faq",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

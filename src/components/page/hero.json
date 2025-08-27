@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_page_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "Links": {
+      "type": "component",
+      "component": "general.link",
+      "repeatable": true
+    },
+    "Style": {
+      "type": "enumeration",
+      "enum": [
+        "LeftBottomGreen",
+        "LeftBottomViolet",
+        "RightTopGreen",
+        "RightTopViolet"
+      ]
+    }
+  },
+  "config": {}
+}

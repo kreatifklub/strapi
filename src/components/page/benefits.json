@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_benefits",
+  "info": {
+    "displayName": "Benefits",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Benefits": {
+      "type": "component",
+      "component": "general.card-benefits",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

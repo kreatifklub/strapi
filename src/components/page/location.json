@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_page_locations",
+  "info": {
+    "displayName": "Location",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Working_Days": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

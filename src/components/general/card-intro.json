@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_general_card_intros",
+  "info": {
+    "displayName": "Card - Intro",
+    "icon": "pencil"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

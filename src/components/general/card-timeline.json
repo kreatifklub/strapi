@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_general_card_timelines",
+  "info": {
+    "displayName": "Card - Timeline",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "Year": {
+      "type": "integer"
+    },
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

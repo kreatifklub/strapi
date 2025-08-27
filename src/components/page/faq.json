@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "FAQ": {
+      "type": "component",
+      "component": "groups.group-faq",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_general_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    },
+    "External": {
+      "type": "boolean"
+    },
+    "AriaLabel": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "enumeration",
+      "enum": [
+        "Primary",
+        "Secondary"
+      ]
+    }
+  },
+  "config": {}
+}

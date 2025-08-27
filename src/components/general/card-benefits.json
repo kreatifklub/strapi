@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_general_card_benefits",
+  "info": {
+    "displayName": "Card - Benefits",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

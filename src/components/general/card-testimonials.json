@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_general_card_testimonials",
+  "info": {
+    "displayName": "Card - Testimonials",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "text"
+    },
+    "Person_Name": {
+      "type": "string"
+    },
+    "Person_Position": {
+      "type": "string"
+    },
+    "Person_Photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

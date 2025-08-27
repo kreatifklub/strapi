@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_employees",
+  "info": {
+    "displayName": "Employees",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Employees": {
+      "type": "component",
+      "component": "general.card-employee",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

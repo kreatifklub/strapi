@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_tiles",
+  "info": {
+    "displayName": "Tiles",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Tiles": {
+      "type": "component",
+      "component": "general.card-tile",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

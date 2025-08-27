@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_timelines",
+  "info": {
+    "displayName": "Timeline",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Timeline": {
+      "type": "component",
+      "component": "general.card-timeline",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

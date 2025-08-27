@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_general_card_tiles",
+  "info": {
+    "displayName": "Card - Tile",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "Tag": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "Url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

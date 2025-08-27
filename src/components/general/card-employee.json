@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_general_card_employees",
+  "info": {
+    "displayName": "Card - Employee",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "Photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "string"
+    },
+    "Quote": {
+      "type": "text"
+    },
+    "Stretch": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
