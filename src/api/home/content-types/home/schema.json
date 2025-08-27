@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "handle": {
+      "type": "string",
+      "required": false,
+      "unique": true,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "Elements": {
+      "type": "dynamiczone",
+      "components": [
+        "page.timeline",
+        "page.tiles",
+        "page.testimonials",
+        "page.sponsors",
+        "page.media-and-text",
+        "page.media-and-text-list",
+        "page.location",
+        "page.intro",
+        "page.hero",
+        "page.gallery",
+        "page.faq",
+        "page.employees",
+        "page.contact",
+        "page.benefits",
+        "page.banner"
+      ]
+    }
+  }
+}
