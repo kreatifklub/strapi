@@ -1,6 +1,6 @@
 const slugify = require("slugify");
 
-export default {
+module.exports = {
     beforeCreate(event) {
         const { data } = event.params;
         if (data.title && !data.slug) {
