@@ -18,15 +18,56 @@
       "type": "string",
       "unique": true
     },
-    "handle": {
-      "type": "string",
-      "unique": true
+    "Parents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "Label": {
+      "type": "string"
+    },
+    "ShortDescription": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "Preview": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "products": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "category"
+    },
+    "FeaturedProducts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "ADS": {
+      "type": "component",
+      "component": "general.card-ads",
+      "repeatable": true
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "openGraph": {
+      "type": "component",
+      "component": "shared.open-graph",
+      "repeatable": false
     }
   }
 }

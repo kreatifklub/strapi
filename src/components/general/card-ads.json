@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_general_card_ads",
+  "info": {
+    "displayName": "Card - ADS",
+    "icon": "pin"
+  },
+  "options": {},
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "component": "general.link",
+      "repeatable": true
+    },
+    "Background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

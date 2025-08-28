@@ -34,16 +34,10 @@
       },
       "targetField": "Title"
     },
-    "handle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": false,
-      "unique": true,
-      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    "Parent": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
     },
     "Elements": {
       "type": "dynamiczone",
@@ -69,6 +63,26 @@
         "page.benefits",
         "page.banner"
       ]
+    },
+    "SEO": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "openGraph": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.open-graph",
+      "repeatable": false
     }
   }
 }
