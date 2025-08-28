@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -25,14 +25,13 @@
       "required": true,
       "unique": false
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "targetField": "Title"
+      }
     },
     "Parent": {
       "type": "relation",

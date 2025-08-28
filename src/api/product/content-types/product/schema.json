@@ -32,6 +32,24 @@
       },
       "unique": true
     },
+    "Slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title"
+    },
+    "handle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "unique": true
+    },
     "productType": {
       "type": "string",
       "pluginOptions": {
@@ -72,24 +90,6 @@
       "component": "shared.open-graph",
       "repeatable": false
     },
-    "Slug": {
-      "type": "uid",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "targetField": "title"
-    },
-    "handle": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "unique": true
-    },
     "description": {
       "type": "text",
       "pluginOptions": {
@@ -121,6 +121,40 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "USP": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "product.usp",
+      "repeatable": true
+    },
+    "LongProductDescription": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
+    },
+    "KeyFeatures": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultMarkdown"
+      }
     }
   }
 }

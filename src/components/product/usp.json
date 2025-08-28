@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_usps",
+  "info": {
+    "displayName": "USP"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

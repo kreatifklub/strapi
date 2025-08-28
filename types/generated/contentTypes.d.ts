@@ -460,8 +460,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', false>;
-    Slug: Schema.Attribute.UID<'Title'>;
-    Title: Schema.Attribute.String;
+    slug: Schema.Attribute.UID;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -527,13 +527,13 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Slug: Schema.Attribute.UID<'Title'> &
+    slug: Schema.Attribute.UID &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Title: Schema.Attribute.String &
+    title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -585,11 +585,35 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    KeyFeatures: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     >;
+    LongProductDescription: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     openGraph: Schema.Attribute.Component<'shared.open-graph', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -637,6 +661,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    USP: Schema.Attribute.Component<'product.usp', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     variants: Schema.Attribute.Relation<'oneToMany', 'api::variant.variant'>;
   };
 }

@@ -11,12 +11,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "string"
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title"
+    "slug": {
+      "type": "uid"
     },
     "Elements": {
       "type": "dynamiczone",

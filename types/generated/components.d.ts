@@ -454,6 +454,16 @@ export interface PageTimeline extends Struct.ComponentSchema {
   };
 }
 
+export interface ProductUsp extends Struct.ComponentSchema {
+  collectionName: 'components_product_usps';
+  info: {
+    displayName: 'USP';
+  };
+  attributes: {
+    Text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -536,6 +546,7 @@ declare module '@strapi/strapi' {
       'page.testimonials': PageTestimonials;
       'page.tiles': PageTiles;
       'page.timeline': PageTimeline;
+      'product.usp': ProductUsp;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }
