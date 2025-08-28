@@ -20,6 +20,13 @@
         "videos"
       ]
     },
+    "Video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
     "Links": {
       "type": "component",
       "component": "general.link",

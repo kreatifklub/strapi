@@ -305,6 +305,7 @@ export interface PageHero extends Struct.ComponentSchema {
     Style: Schema.Attribute.Enumeration<
       ['LeftBottomGreen', 'LeftBottomViolet', 'RightTopGreen', 'RightTopViolet']
     >;
+    Video: Schema.Attribute.Media<'videos'>;
   };
 }
 
