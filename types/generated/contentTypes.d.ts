@@ -399,6 +399,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::product.product'
     >;
+    handle: Schema.Attribute.String & Schema.Attribute.Unique;
     label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -412,6 +413,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     short_description: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     systemId: Schema.Attribute.String & Schema.Attribute.Unique;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

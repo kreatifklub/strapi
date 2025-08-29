@@ -18,6 +18,14 @@
       "type": "string",
       "unique": true
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "handle": {
+      "type": "string",
+      "unique": true
+    },
     "label": {
       "type": "string"
     },
