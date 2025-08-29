@@ -285,6 +285,29 @@ export interface PageFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface PageFeaturedProducts extends Struct.ComponentSchema {
+  collectionName: 'components_page_featured_products';
+  info: {
+    displayName: 'Featured Products';
+    icon: 'store';
+  };
+  attributes: {
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    Headline: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+    Text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultMarkdown';
+        }
+      >;
+  };
+}
+
 export interface PageGallery extends Struct.ComponentSchema {
   collectionName: 'components_page_galleries';
   info: {
@@ -536,6 +559,7 @@ declare module '@strapi/strapi' {
       'page.contact': PageContact;
       'page.employees': PageEmployees;
       'page.faq': PageFaq;
+      'page.featured-products': PageFeaturedProducts;
       'page.gallery': PageGallery;
       'page.hero': PageHero;
       'page.intro': PageIntro;
