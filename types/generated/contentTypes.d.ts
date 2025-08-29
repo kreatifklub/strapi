@@ -560,6 +560,7 @@ export interface ApiProductVariantProductVariant
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    handle: Schema.Attribute.String & Schema.Attribute.Unique;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -568,6 +569,7 @@ export interface ApiProductVariantProductVariant
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     sku: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     systemId: Schema.Attribute.String & Schema.Attribute.Unique;
     title: Schema.Attribute.String & Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;

@@ -21,6 +21,14 @@
     },
     "sku": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "handle": {
+      "type": "string",
+      "unique": true
     }
   }
 }
