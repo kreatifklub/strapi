@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "variants",
+  "collectionName": "product_variants",
   "info": {
-    "singularName": "variant",
-    "pluralName": "variants",
-    "displayName": "Variant",
-    "description": "Product variant for Medusa/DevX integration"
+    "singularName": "product-variant",
+    "pluralName": "product-variants",
+    "displayName": "Product Variant"
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +22,8 @@
           "localized": true
         }
       },
-      "required": true
+      "required": true,
+      "unique": false
     },
     "systemId": {
       "type": "string",
@@ -43,11 +43,23 @@
         }
       }
     },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "variants"
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title"
+    },
+    "handle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "unique": true
     }
   }
 }
