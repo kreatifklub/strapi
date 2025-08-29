@@ -45,14 +45,6 @@
       "relation": "manyToOne",
       "target": "api::product.product",
       "inversedBy": "variants"
-    },
-    "inventory_quantity": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     }
   }
 }
