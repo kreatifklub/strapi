@@ -17,12 +17,12 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "systemId": {
       "type": "string",
@@ -157,6 +157,12 @@
       "options": {
         "preset": "defaultMarkdown"
       }
+    },
+    "product_variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-variant.product-variant",
+      "mappedBy": "product"
     }
   }
 }

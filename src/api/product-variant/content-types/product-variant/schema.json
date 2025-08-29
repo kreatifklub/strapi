@@ -60,6 +60,12 @@
         }
       },
       "unique": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_variants"
     }
   }
 }
