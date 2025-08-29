@@ -686,6 +686,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    metadata: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     open_graph: Schema.Attribute.Component<'shared.open-graph', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
