@@ -66,12 +66,6 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "variants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variant.variant",
-      "mappedBy": "product"
-    },
     "seo": {
       "type": "component",
       "pluginOptions": {
