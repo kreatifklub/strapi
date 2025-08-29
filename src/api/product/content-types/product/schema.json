@@ -32,7 +32,7 @@
       },
       "unique": true
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "pluginOptions": {
         "i18n": {
@@ -70,7 +70,7 @@
       "target": "api::variant.variant",
       "mappedBy": "product"
     },
-    "SEO": {
+    "seo": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -80,7 +80,7 @@
       "component": "shared.seo",
       "repeatable": false
     },
-    "openGraph": {
+    "open_graph": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -122,7 +122,7 @@
         "images"
       ]
     },
-    "USP": {
+    "usp": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -132,7 +132,7 @@
       "component": "product.usp",
       "repeatable": true
     },
-    "LongProductDescription": {
+    "long_product_description": {
       "type": "customField",
       "pluginOptions": {
         "i18n": {
@@ -144,7 +144,7 @@
         "preset": "defaultMarkdown"
       }
     },
-    "KeyFeatures": {
+    "key_features": {
       "type": "customField",
       "pluginOptions": {
         "i18n": {

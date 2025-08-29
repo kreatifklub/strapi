@@ -384,35 +384,34 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    ADS: Schema.Attribute.Component<'general.card-ads', true>;
+    ads: Schema.Attribute.Component<'general.card-ads', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.RichText &
+    description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultMarkdown';
         }
       >;
-    FeaturedProducts: Schema.Attribute.Relation<
+    featured_products: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     >;
-    Label: Schema.Attribute.String;
+    label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::category.category'
     > &
       Schema.Attribute.Private;
-    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
-    Parents: Schema.Attribute.Relation<'oneToMany', 'api::category.category'>;
-    Preview: Schema.Attribute.Media<'images'>;
+    open_graph: Schema.Attribute.Component<'shared.open-graph', false>;
+    preview: Schema.Attribute.Media<'images'>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
-    SEO: Schema.Attribute.Component<'shared.seo', false>;
-    ShortDescription: Schema.Attribute.String;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    short_description: Schema.Attribute.String;
     systemId: Schema.Attribute.String & Schema.Attribute.Unique;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -487,7 +486,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Elements: Schema.Attribute.DynamicZone<
+    elements: Schema.Attribute.DynamicZone<
       [
         'page.timeline',
         'page.tiles',
@@ -513,15 +512,15 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
-    openGraph: Schema.Attribute.Component<'shared.open-graph', false> &
+    open_graph: Schema.Attribute.Component<'shared.open-graph', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Parent: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+    pages: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     publishedAt: Schema.Attribute.DateTime;
-    SEO: Schema.Attribute.Component<'shared.seo', false> &
+    seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -585,7 +584,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    KeyFeatures: Schema.Attribute.RichText &
+    key_features: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -602,7 +601,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::product.product'
     >;
-    LongProductDescription: Schema.Attribute.RichText &
+    long_product_description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -614,7 +613,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    openGraph: Schema.Attribute.Component<'shared.open-graph', false> &
+    open_graph: Schema.Attribute.Component<'shared.open-graph', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -627,13 +626,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    SEO: Schema.Attribute.Component<'shared.seo', false> &
+    seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Slug: Schema.Attribute.UID<'title'> &
+    slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -661,7 +660,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    USP: Schema.Attribute.Component<'product.usp', true> &
+    usp: Schema.Attribute.Component<'product.usp', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

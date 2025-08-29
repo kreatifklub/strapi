@@ -18,25 +18,20 @@
       "type": "string",
       "unique": true
     },
-    "Parents": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
-    },
-    "Label": {
+    "label": {
       "type": "string"
     },
-    "ShortDescription": {
+    "short_description": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
         "preset": "defaultMarkdown"
       }
     },
-    "Preview": {
+    "preview": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -49,22 +44,22 @@
       "target": "api::product.product",
       "mappedBy": "category"
     },
-    "FeaturedProducts": {
+    "featured_products": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product"
     },
-    "ADS": {
+    "ads": {
       "type": "component",
       "component": "general.card-ads",
       "repeatable": true
     },
-    "SEO": {
+    "seo": {
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
     },
-    "openGraph": {
+    "open_graph": {
       "type": "component",
       "component": "shared.open-graph",
       "repeatable": false
