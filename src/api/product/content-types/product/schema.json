@@ -66,6 +66,12 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
+    "variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-variant.product-variant",
+      "mappedBy": "product"
+    },
     "seo": {
       "type": "component",
       "pluginOptions": {
@@ -151,12 +157,6 @@
       "options": {
         "preset": "defaultMarkdown"
       }
-    },
-    "product_variants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product-variant.product-variant",
-      "mappedBy": "product"
     },
     "metadata": {
       "type": "json",
